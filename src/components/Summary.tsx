@@ -4,9 +4,9 @@ type Props = {
   title: string
 }
 
-export default function Summary({ red, green, title }: Props){
+export default function Summary({ red, green, title }: Props) {
   const total = red + green
-  const pctGreen = total ? Math.round((green/total)*100) : 0
+  const pctGreen = total ? Math.round((green / total) * 100) : 0
 
   return (
     <div className="summary">

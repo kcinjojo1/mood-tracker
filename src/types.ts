@@ -1,6 +1,3 @@
-// src/types.ts
-
-// All the categories you defined in App.tsx
 export type CategoryKey =
   | 'wokeRested'
   | 'hasGoal'
@@ -10,20 +7,19 @@ export type CategoryKey =
   | 'goodMeal'
   | 'bedRested'
 
-// Each log entry when someone taps a red/green button
+export type TapValue = 'red' | 'green'
+
 export interface TapEvent {
-  id: string         // unique id for the tap
-  ts: number         // timestamp in ms
+  id: string        // uuid
+  ts: number        // unix ms
   category: CategoryKey
-  value: 'red' | 'green'
+  value: TapValue
 }
 
-// Meta information for rendering the categories
 export interface CategoryMeta {
   key: CategoryKey
   label: string
   hint?: string
 }
 
-// Period options for your summaries
 export type Period = 'day' | 'week' | 'month'
